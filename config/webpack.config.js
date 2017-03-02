@@ -22,7 +22,12 @@ let config = {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 enforce: 'pre',
-                use: ['eslint-loader'],
+                use: [{
+                    loader: 'eslint-loader',
+                    options: {
+                        emitWarning: true
+                    }
+                }],
             },
             {
                 test: /\.js$/,
@@ -39,6 +44,7 @@ let config = {
             {
                 test: /\.scss$/,
                 loader: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
                     use: ['css-loader', 'sass-loader']
                 })
             },
