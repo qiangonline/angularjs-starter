@@ -1,4 +1,4 @@
-#angularjs(ng1) webpack2 example
+# angularjs(ng1) webpack2 example
 
 ## 安装
 
